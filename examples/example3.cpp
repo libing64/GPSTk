@@ -89,8 +89,8 @@ int main(int argc, char *argv[])
 
          // The following lines fetch the corresponding indexes for some
          // observation types we are interested in
-      int indexP1( roh.getObsIndex( "P1" ) );
-      int indexP2( roh.getObsIndex( "P2" ) );
+      int indexP1( roh.getObsIndex( "C1W" ) );
+      int indexP2( roh.getObsIndex( "C2W" ) );
 
          // Loop through epochs and process data for each.
          // ----------------------------------------------
@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
                // On the other hand it has the advantage that it doesn't need
                // a prior call to method 'Rinex3ObsHeader::getObsIndex()'
                // -----------------------------------------------------------
-            dataobj = roe.getObs(prn, "L1", roh);
+            dataobj = roe.getObs(prn, "L1C", roh);
             double L1 = dataobj.data;
 
                // Compute multipath
